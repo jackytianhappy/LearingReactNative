@@ -1,5 +1,5 @@
 {
-  "name": "NaviDemo",
+  "name": "NaviWithParams",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "react": "15.3.1",
-    "react-native": "^0.32.0",
-    "react-native-swiper": "^1.4.11"
+    "react-native": "^0.32.0"
   }
 }

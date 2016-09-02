@@ -33,7 +33,7 @@ export default class FirstPageVC extends React.Component {
     return (
       <View style={{alignItems:'center',justifyContent:'center',height:200}}>
         <TouchableOpacity onPress={this._pressButton.bind(this)}>
-          <Text>点我跳转</Text>
+          <Text>欢迎典籍</Text>
         </TouchableOpacity>
       </View>
     );
