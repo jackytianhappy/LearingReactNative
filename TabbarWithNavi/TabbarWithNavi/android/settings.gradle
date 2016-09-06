@@ -1,0 +1,3 @@
+rootProject.name = 'TabbarWithNavi'
+
+include ':app'
