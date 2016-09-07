@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 import HomeNavi from  './src/Home/HomeNavi';
+import MinePageNavi from './src/Mine/MinePageNavi';
 
 class TabbarWithNavi extends Component {
   //初始化变量
@@ -57,7 +58,7 @@ class TabbarWithNavi extends Component {
           });
         }}
         >
-        <View style = {styles.container}/>
+        <MinePageNavi/>
         </TabBarIOS.Item>
 
       </TabBarIOS>
