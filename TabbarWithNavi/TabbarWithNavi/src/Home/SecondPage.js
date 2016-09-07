@@ -12,11 +12,15 @@ export default class SecondPage extends React.Component{
   constructor(props){
     super(props);
     console.log('这边输出具体信息:'+this.props.VCName);
+    ;
   }
 
   _returnBack = ()=>{
       const {navigator} = this.props;
       if (navigator){
+        if (this.props.getReturnParam) {
+          this.props.getReturnParam('返回了');
+        }
         navigator.pop();
       }
   }
