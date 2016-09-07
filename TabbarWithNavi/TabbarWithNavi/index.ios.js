@@ -21,9 +21,9 @@ class TabbarWithNavi extends Component {
     selectedTab : 'home'
   };
 
-  constructor(props){
-    super(props);
-  }
+  _renderRooView = ()=>{
+      return(HomeNavi);
+  };
 
   render() {
     return (
@@ -33,7 +33,8 @@ class TabbarWithNavi extends Component {
       barTintColor = 'darkslateblue'>
 
         <TabBarIOS.Item
-        //systemIcon = 'history'
+        systemIcon = 'history'
+          //icon = {require('./imgSrc/icon_home.png')}
         title = '首页'
         selected = {this.state.selectedTab === 'home'}
         onPress = {()=>{
@@ -41,11 +42,12 @@ class TabbarWithNavi extends Component {
             selectedTab : 'home',
           });
         }}>
-          <View style={styles.container}></View>
+         <HomeNavi/>
         </TabBarIOS.Item>
 
         <TabBarIOS.Item
-          // systemIcon = 'more'
+           systemIcon = 'more'
+          //icon = {require('./imgSrc/icon_me.png')}
         title = '我的'
         selected = {this.state.selectedTab === 'mine'}
         onPress = {()=>{
@@ -74,3 +76,4 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('TabbarWithNavi', () => TabbarWithNavi);
+
