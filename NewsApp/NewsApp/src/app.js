@@ -6,12 +6,12 @@ import {
   StyleSheet
 } from 'react-native';
 
+import Tabbar from './tabbarVC/tabbar.js';
+
 export default class app extends Component {
   render() {
     return (
-      <View style={styles.container}>
-
-      </View>
+      <Tabbar/>
     );
   }
 }
