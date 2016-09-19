@@ -4,6 +4,8 @@ import{
   View
 }from 'react-native';
 
+import HomeNavi from './homeNavi.js'
+
 export default class Tabbar extends Component {
   constructor(props){
     super(props);
@@ -25,7 +27,7 @@ export default class Tabbar extends Component {
                                      selectedTab : '首页'
                                    });
                                  }}>
-                                 <View></View>
+                                 <HomeNavi></HomeNavi>
                  </TabBarIOS.Item>
                  <TabBarIOS.Item title = '我的'
                                 //  systemIcon = 'contacts'

@@ -3,6 +3,8 @@ import {
   Navigator
 } from 'react-native';
 
+import Home from '../home/home.js'
+
 export default class HomeNavi extends Component {
   constructor(props) {
     super(props);
@@ -10,8 +12,17 @@ export default class HomeNavi extends Component {
 
   render(){
     return(
-      <Navigator
-      >
+      <Navigator initialRoute = {{name:'home',componet:Home}}
+                 configureScene = {(route)=>{
+                   return Navigator.SceneConfigs.VerticalDownSwipeJump;
+                 }}
+                 renderScene = {(route,navigator) => {
+                   let Com = route.componet;
+                   return <Com {...route.params} navigator = {navigator}></Com>
+                 }}
+
+                 
+                 >
 
       </Navigator>
     );
