@@ -11,7 +11,14 @@ export default class Tabbar extends Component {
                  tintColor = 'white'
                  barTintColor = 'darkslateblue'
                  >
+                 <TabBarIOS.Item title = '首页'
+                                 systemIcon = 'history'>
 
+                 </TabBarIOS.Item>
+                 <TabBarIOS.Item title = '我的'
+                                 systemIcon = 'More'>
+
+                 </TabBarIOS.Item>
       </TabBarIOS>
     );
   }
