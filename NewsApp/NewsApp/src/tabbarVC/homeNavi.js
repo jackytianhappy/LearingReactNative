@@ -5,7 +5,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-import Home from '../home/home.js'
+import Home from '../home/view/home.js'
 
 
 var NavigationBarRouteMapper = {
