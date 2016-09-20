@@ -24,7 +24,7 @@ export default class HomeViewCell extends Component {
       <TouchableOpacity style = {styles.cellView} onPress={this._onPressButton}>
         <View style = {styles.cellTopView}>
           <Image style = {styles.cellImage}
-                 source = {require('')}></Image>
+                 source = {require({this.props.object.source})}></Image>
           <Text style = {styles.cellNameText}>{this.props.object.name}</Text>
         </View>
         <View style = {styles.bottomLineView}></View>
