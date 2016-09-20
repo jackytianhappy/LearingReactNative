@@ -13,8 +13,7 @@ export default class Home extends Component {
     super(props);
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      //dataSource: ds.cloneWithRows([{'Jacky'}, 'Jasmine', 'Luna', 'Hermine']),
-      dataSource: ds.cloneWithRows([{name:'Jacky',source:'',id:'1'},
+      dataSource: ds.cloneWithRows([{name:'Jacky',source:'../../../imgSrc/jacky.jpg',id:'1'},
                                     {name:'Jasmine',source:'',id:'2'},
                                     {name:'Luna',source:'',id:'3'},
                                     {name:'Hermine',source:'',id:'4'},]),
@@ -25,7 +24,7 @@ export default class Home extends Component {
         <View style ={styles.totalBgView}>
           <ListView style = {styles.listView}
                     dataSource = {this.state.dataSource}
-                    renderRow={(rowData) => <HomeViewCell object = {rowData}/>}/>
+                    renderRow={(rowData) => <HomeViewCell object = {rowData} navigator = {this.props.navigator} />}/>
         </View>
       );
   }

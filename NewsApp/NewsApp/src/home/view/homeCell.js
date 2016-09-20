@@ -3,7 +3,8 @@ import {
   StyleSheet,
   View,
   Image,
-  Text
+  Text,
+  TouchableOpacity
 } from 'react-native';
 
 export default class HomeViewCell extends Component {
@@ -11,15 +12,23 @@ export default class HomeViewCell extends Component {
       super(props);
   }
 
+  _onPressButton = ()=>{
+     const { navigator } = this.props;
+     if (navigator) {
+       alert(this.props.object.source);
+     }
+  }
+
   render(){
     return(
-      <View style = {styles.cellView} >
+      <TouchableOpacity style = {styles.cellView} onPress={this._onPressButton}>
         <View style = {styles.cellTopView}>
-          <Image style = {styles.cellImage}></Image>
+          <Image style = {styles.cellImage}
+                 source = {require('')}></Image>
           <Text style = {styles.cellNameText}>{this.props.object.name}</Text>
         </View>
         <View style = {styles.bottomLineView}></View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
@@ -48,7 +57,6 @@ const styles = StyleSheet.create({
     color : 'black',
     marginTop : 5,
     marginLeft :10
-
   },
   bottomLineView : {
     height:1,
