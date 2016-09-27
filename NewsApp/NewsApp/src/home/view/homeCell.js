@@ -7,6 +7,8 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import PersonDetailPage from '../personDetailVC/personDetailVC.js'
+
 export default class HomeViewCell extends Component {
   constructor(props) {
       super(props);
@@ -14,8 +16,14 @@ export default class HomeViewCell extends Component {
 
   _onPressButton = ()=>{
      const { navigator } = this.props;
+     console.log(this.props.object);
      if (navigator) {
-       alert(this.props.object.source);
+       navigator.push({
+         componet:PersonDetailPage,
+         params:{
+           person:this.props.object
+         }
+       });
      }
   }
 
@@ -25,8 +33,7 @@ export default class HomeViewCell extends Component {
       <TouchableOpacity style = {styles.cellView} onPress={this._onPressButton}>
         <View style = {styles.cellTopView}>
           <Image style = {styles.cellImage}
-                 source = {require('../../../imgSrc/jacky.jpg')} ></Image>
-                 //Fix Me I want to be dunamic
+                 source = {require('../../../imgSrc/jacky.jpg')}></Image>
           <Text style = {styles.cellNameText}>{this.props.object.name}</Text>
         </View>
         <View style = {styles.bottomLineView}></View>

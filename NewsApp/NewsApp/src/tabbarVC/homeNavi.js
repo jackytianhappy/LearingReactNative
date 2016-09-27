@@ -26,7 +26,6 @@ Title: function (route, navigator, index, navState) {
 export default class HomeNavi extends Component {
   constructor(props) {
     super(props);
-
   }
 
   render(){
